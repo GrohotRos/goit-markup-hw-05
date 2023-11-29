@@ -99,12 +99,6 @@ button {
     margin-left: 76px;
 }
 
-.menu-item .current {
-    position: relative;
-    color: #404BBF;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .menu-header .current::after {
     content: "";
     position: absolute;
@@ -115,6 +109,12 @@ button {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
+}
+
+.menu-item .current {
+    position: relative;
+    color: #404BBF;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link {
@@ -223,16 +223,6 @@ button {
     overflow: hidden;
 }
 
-.benefits-title {
-    color: #2e2f42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
 .menu-benefits {
     gap: 24px;
 }
@@ -251,6 +241,16 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.benefits-title {
+    color: #2e2f42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .text-page {
@@ -281,9 +281,6 @@ button {
 
 .menu-our-team {
     width: calc((100% - 72px)/4);
-}
-
-.menu-our-team {
     background-color: #FFF;
     border: 1px solid #E7E9FC;
     border-radius: 0px 0px 4px 4px;
@@ -380,18 +377,12 @@ button {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-container {
-    border: 1px solid #E7E9FC;
-    border-top: none;
-    padding: 32px 16px;
+.portfolio-list-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.projects-list {
-    color: #2e2f42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
+.portfolio-list-item:hover .overlay {
+    transform: translateY(0%);
 }
 
 .hidden-container {
@@ -413,12 +404,18 @@ button {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list-item:hover {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+.portfolio-container {
+    border: 1px solid #E7E9FC;
+    border-top: none;
+    padding: 32px 16px;
 }
 
-.portfolio-list-item:hover .overlay {
-    transform: translateY(0%);
+.projects-list {
+    color: #2e2f42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 
 /* ========== FOOTER ========== */
@@ -442,17 +439,13 @@ button {
     flex-direction: column;
 }
 
-.logo-bottom {
-    color: #F4F4FD;
-}
-
-.footer-list {
-    gap: 16px;
-}
-
 .logo-footer {
     margin-bottom: 16px;
     display: inline-block;
+}
+
+.logo-bottom {
+    color: #F4F4FD;
 }
 
 .text-bottom {
@@ -472,6 +465,10 @@ button {
     color: #FFFFFF;
 }
 
+.footer-list {
+    gap: 16px;
+}
+
 .footer-list-link {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -482,4 +479,21 @@ button {
 
 .footer-list-link:focus {
     background-color: #31D0AA;
+}
+
+/* ========== FORM ========== */
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    width: 408px;
+    height: 584px;
+}
+
+.text-form {
+    font-weight: 500;
+}
+
+textarea {
+    resize: none;
 }
