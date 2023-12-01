@@ -481,6 +481,13 @@ button {
     background-color: #31D0AA;
 }
 
+.mail-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.mail-form {
+}
 /* ========== FORM ========== */
 
 .feedback-form {
