@@ -489,12 +489,35 @@ button {
 .mail-form {
 }
 /* ========== FORM ========== */
+/* 
+.backdrop {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.40);
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
 .feedback-form {
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 408px;
-    height: 584px;
+    min-height: 584px;
+    border-radius: 4px;
+    background-color: #FCFCFC;
 }
 
 .text-form {
@@ -503,4 +526,4 @@ button {
 
 textarea {
     resize: none;
-}
+} */
