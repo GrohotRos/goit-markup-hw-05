@@ -433,7 +433,7 @@
 
   <div classs="backdrop is-open">
     <div class="form-page">
-      <button class="close-btn">
+      <button class="close-btn" type="button">
         <svg class="close-btn-svg" width="8" height="8" aria-label="close button">
           <use href="./images/icons.svg#icon-close-button"></use>
         </svg>
@@ -441,17 +441,17 @@
       <p class="text-form">Leave your contacts and we will call you back</p>
       <form class="feedback-form">
         <div class="form-wrapper">
-          <label class="title-field-form" for="username">Name</label>
+          <label class="title-field-form" for="user-name">Name</label>
           <div class="input-wrapper">
             <input class="field-form" 
-            id="username" 
+            id="user-name" 
             name="user-name" 
             type="text"
             required
             />
             <svg class="form-input-icon" 
             width="18px" 
-            height="18px" 
+            height="24px" 
             aria-label="person icon">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
@@ -468,7 +468,7 @@
             />
             <svg class="form-input-icon" 
             width="18px" 
-            height="18px" 
+            height="24px" 
             aria-label="phone icon">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
@@ -485,13 +485,13 @@
             />
             <svg class="form-input-icon" 
             width="18px" 
-            height="18px" 
+            height="24px" 
             aria-label="email icon">
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
           </div>
         </div>
-        <div>
+        <div class="form-wrapper-comment">
           <label class="title-field-form" for="user-comment">Comment</label>
           <textarea class="field-form-comment" 
           name="user-comment" 
@@ -501,18 +501,18 @@
         </div>
         <div class="chekbox-wrapper">
           <input class="form-chekbox visually-hidden"
-          id="user-rules" 
-          name="user-rules"
+          id="user-privacy" 
+          name="user-privacy"
           type="checkbox"
           value="true"
           required>
-          <label class="rules-chekbox" for="user-rules">
+          <label class="rules-chekbox" for="user-privacy">
             <span class="rules-chekbox-form">
               <svg class="chek-svg" width="10" height="8" aria-label="chekbox icon">
                 <use href="./images/icons.svg#icon-chekbox"></use>
               </svg>
             </span>
-            I accept the terms and conditions of the <a href="">Privacy Policy</a>
+            I accept the terms and conditions of the <a class="rules-link" href="">Privacy Policy</a>
           </label>
         </div>
         <button class="rules-chekbox-btn" type="submit">Send</button>
