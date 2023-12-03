@@ -487,14 +487,9 @@ button {
     flex-direction: column;
 }
 
-.mail-form {
-}
 /* ========== FORM ========== */
-/* 
-.backdrop {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+ 
+.feedback-page {
     position: fixed;
     top: 0;
     left: 0;
@@ -504,19 +499,18 @@ button {
     background-color: rgba(46, 47, 66, 0.40);
 }
 
-.backdrop.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+.form-page {
+    width: 408px;
+    min-height: 584px;
+    background-color: #FCFCFC;
+    border-radius: 4px;
 }
-
+/* 
 .feedback-form {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 408px;
-    min-height: 584px;
     border-radius: 4px;
     background-color: #FCFCFC;
 }
@@ -527,4 +521,4 @@ button {
 
 textarea {
     resize: none;
-} */
+} */  
