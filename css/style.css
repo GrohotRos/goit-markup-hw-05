@@ -58,6 +58,8 @@ button {
     padding-bottom: 120px;
 }
 
+/* ========== Common styles ========== */
+
 /* ========== HEADER ========== */
 
 .site-header {
@@ -156,6 +158,8 @@ button {
     color: #404BBF;
 }
 
+/* ========== HEADER ========== */
+
 /* ========== MAIN ========== */
 
 /* ========== section 1 ========== */
@@ -206,6 +210,8 @@ button {
 .order-page:focus {
     background-color: #404BBF;
 }
+
+/* ========== section 1 ========== */
 
 /* ========== section 2 ========== */
 
@@ -258,6 +264,8 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+
+/* ========== section 2 ========== */
 
 /* ========== section 3 ========== */
 
@@ -349,6 +357,8 @@ button {
     fill: #F4F4FD;
 }
 
+/* ========== section 3 ========== */
+
 /* ========== section 4 ========== */
 
 .portfolio-title {
@@ -419,6 +429,10 @@ button {
     margin-bottom: 8px;
 }
 
+/* ========== section 4 ========== */
+
+/* ========== MAIN ========== */
+
 /* ========== FOOTER ========== */
 
 .page-bottom {
@@ -485,11 +499,73 @@ button {
 .mail-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 80px;
 }
+
+.text-form-footer {
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.mail-form {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-form {
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.footer-mail-field {
+    width: 264px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 12px;
+    border: 1px solid #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    padding: 8px 16px;
+    color: #FFF;
+}
+
+.footer-mail-field::placeholder {
+    color: #FFF;
+}
+
+.btn-form-footer {
+    display: flex;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    display: inline-flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 4px;
+    background-color: #4D5AE5;
+    color: #FFF;
+    text-align: center;
+    border: none;
+}
+
+.footer-email-icons {
+    fill: #FFF;
+}
+
+/* ========== FOOTER ========== */
 
 /* ========== FORM ========== */
  
-.feedback-page {
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -497,28 +573,192 @@ button {
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.40);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .form-page {
-    width: 408px;
-    min-height: 584px;
-    background-color: #FCFCFC;
-    border-radius: 4px;
-}
-/* 
-.feedback-form {
     position: absolute;
+    padding: 24px;
+    width: 408px;
+    height: 584px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 4px;
     background-color: #FCFCFC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 0;
+    line-height: 0;
+    top: 24;
+    right: 24;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    fill: #2E2F42;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    background-color: #404BBF;
+    border: none;
+    fill: #FFF;
 }
 
 .text-form {
+    color: #2E2F42;
+    font-size: 16px;
     font-weight: 500;
+    text-align: center;
+    margin-top: 48px;
 }
 
-textarea {
+.form-wrapper {
+    margin-bottom: 8px;
+}
+
+.title-field-form {
+    display: block;
+    color: #8E8F99;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1,17;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+}
+
+.input-wrapper {
+    position: relative;
+
+}
+
+.field-form {
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    border-radius: 4px;
+    padding-left: 38px;
+    outline: 0px solid transparent;
+    transition: stroke 250ms cubic-bezier(0,4, 0, 0.2, 1);
+}
+
+.field-form:focus {
+    border: 1px solid #4D5AE5;
+}
+
+.form-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    stroke: #2E2F42;
+    transition: stroke 250ms linear;
+}
+
+.field-form:focus + .form-input-icon {
+    fill: #4D5AE5;
+}
+
+.field-form-comment {
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 12px;
+    letter-spacing: 0,04em;
+    color: rgba(46, 47, 66, 0.40);
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    background-color: transparent;
+    outline: 0px solid transparent;
     resize: none;
-} */  
+    transition: stroke 250ms cubic-bezier(0,4, 0, 0.2, 1);
+}
+
+.field-form-comment::placeholder {
+    color: rgba(46, 47, 66, 0.40);
+}
+
+.field-form-comment:focus {
+    border: 1px solid #4D5AE5;
+}
+
+.chekbox-wrapper {
+    margin-bottom: 24px;
+}
+
+.form-chekbox:checked + .rules-chekbox .rules-chekbox-form{
+    background-color: #404BBF;
+    border: none;
+    fill: #F4F4FD;
+}
+
+.form-chekbox:focus + .rules-chekbox .rules-chekbox-form{
+    outline: 1px solid #4D5AE5;;
+}
+
+.rules-chekbox {
+    font-size: 12px;
+    line-height: 1,17;
+    letter-spacing: 0.04em;
+}
+
+.rules-chekbox-form {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.chek-svg {
+    opacity: 0;
+}
+
+.form-chekbox:checked + .rules-chekbox .chek-svg{
+    opacity: 1;
+}
+
+.rules-chekbox-btn {
+    display: block;
+    width: 169px;
+    height: 56px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    padding: 16px 32px;
+    background-color: #4D5AE5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: #FFF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* ========== FORM ========== */
